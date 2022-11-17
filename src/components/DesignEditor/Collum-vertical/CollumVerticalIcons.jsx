@@ -22,17 +22,11 @@ function CollumVerticalIcons() {
 const [value, SetValue] = useState(0)
 
 
-
-
-
-
-
     return (
         <>
             <div className="container-vertical">
 
                 <div className="Coluna-vertical-icons">
-                    <h2>{value}</h2>
                     <CgTemplate className="styleIcons" onClick={()=>{SetValue(1)}}/>
                     <GoSettings className="styleIcons" onClick={()=>{SetValue(2)}}/>
                     <FaShapes className="styleIcons" onClick={()=>{SetValue(3)}}/>
@@ -43,10 +37,10 @@ const [value, SetValue] = useState(0)
 
                 </div>
                 <div className="Coluna-Vertical-Images"  >
-                    <div className="container-vertical" style={{ margin: 15 }}>
+         <button className="DoubleArrow" ><MdDoubleArrow /></button>
+                    <div className="container-vertical" style={{ margin: 5 }} >
                     {value == 1? <Templates/>:value == 2? <Customize />:value == 3? <Elements/>:value == 4? <Images/>:value == 5? <Uploads/>:value == 6? <Text/>:value == 7? <Video/>: <p>Sem Resultados</p>}
 
-                        <button style={{ backgroundColor: "rgba(163, 135, 135, 0)", border: "none", height: 27, marginRight: 23, fontSize: 30 }}><MdDoubleArrow /></button>
                     </div>
                     Coluna-Vertical-Images
                 </div>

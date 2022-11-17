@@ -1,8 +1,12 @@
 import StyleIconsVertical from './StyleIconsVertical.css'
 function Uploads() {
-    return(
+    return (
         <>
-        <h1>Upload</h1>
+            <div>
+                <h1>Upload</h1>
+                
+            </div>
+
         </>
     )
 };

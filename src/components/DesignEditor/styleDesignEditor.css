@@ -28,44 +28,63 @@ margin: 0px;
 }
 .container-vertical {
 display: flex;
-width: 25rem;
+width: 20rem;
 }
+
 .Coluna-vertical-icons {
 background-color: rgb(66, 46, 46);
-flex-grow:0 ;
 flex-direction: row; 
 height: 100%;
-width: 5rem;
+width: 3rem;
 }
 .Coluna-Vertical-Images {
 background-color: rgb(66, 30, 30);
-width: 14rem;
+width: 20rem;
 height: 100%;
+overflow: auto;
 }
+::-webkit-scrollbar{ 
+background-color: #797b81;
+width: 5px;
+border-radius: 5px;
+}
+.DoubleArrow {
+background-color: rgba(163, 135, 135, 0);
+border: 0px;
+height: 27px;
+font-size: 30px;
+cursor: pointer;
+position: absolute;
+top: 10%;
+right: 25rem;
+}
+
 .Coluna-horizontal-View {
 background-color: #F1F2F6;
-flex-grow:5;
 width: 100%;
 height: 70%;
 overflow: auto;
 }
 .horizontal-View-header {
-width: 100%;
+margin: auto;
+width: 95%;
 height: 50px;
 background-color: white;
 }
 .Coluna-Horizontal-config {
 background-color: rgb(78, 2, 2);
 flex-grow:2 ;
-width: 100%;
+margin: auto;
+width: 95%;
 height: 30%;
 
 }
 .styleIcons {
-width: 4.5rem;
+width: 3rem;
 height: 2.5rem;
 margin: 5px 0px ;
-padding:5px ;
+padding: 8px ;
+cursor: pointer;
 }
 .styleIcons:hover {
 opacity: 0.5;
