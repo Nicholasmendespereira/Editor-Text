@@ -1,5 +1,6 @@
 import StyleIconsVertical from './StyleIconsVertical.css'
 import { useState } from 'react'
+import Collumhorizontal from '../../Collum-horizontal/Collumhorizontal'
 
 function Customize() {
 const [color, SetColor] = useState("#e66465")
@@ -27,6 +28,7 @@ const [color, SetColor] = useState("#e66465")
                 <div className='divsColors' style={{ backgroundColor: "#D92B8B" }} onClick={() => { SetColor("#D92B8B") }}></div>
                 <div className='divsColors' style={{ backgroundColor: "#B7BFAA" }} onClick={() => { SetColor("#B7BFAA") }}></div>
 
+            <Collumhorizontal color={color}/>
             </div>
         </div>
     </>

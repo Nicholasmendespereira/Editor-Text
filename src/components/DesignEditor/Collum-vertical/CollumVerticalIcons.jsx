@@ -43,7 +43,7 @@ function CollumVerticalIcons() {
     const StyledAvatar = styled(Avatar)`
 ${({ theme }) => `
 cursor: pointer;
-background-color: ${theme.palette.primary.main};
+background-color: #020659;
 transition: ${theme.transitions.create(['background-color', 'transform'], {
         duration: theme.transitions.duration.standard,
     })};
@@ -81,16 +81,9 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
                     </StyledAvatar>
 
 
-
-
-
-
-
-
-
                 </div>
                 {/* Botao de show/hidden */}
-                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2 }}
+                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2}}
                     control={<Switch checked={checked} onChange={handleChange} />} />
                 <Box sx={{ display: "flex" }}>
                     <Fade in={checked}>

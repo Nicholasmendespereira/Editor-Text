@@ -3,6 +3,8 @@ import { useState } from "react";
 import styleDesignEditor from "../styleDesignEditor.css";
 import img from "../../../imgs/pexels-miguel-á-padriñán-2882636.jpg"
 
+import Customize from "../Collum-vertical/Icons-vertical/Customize";
+
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import { deepPurple } from '@mui/material/colors';
@@ -18,7 +20,7 @@ import { MdOutlineRestore } from "react-icons/md"
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs"
 import { Input } from "@mui/material";
 
-function Collumhorizontal() {
+function Collumhorizontal( { color }) {
     const [size, SetSize] = useState(300)
     const [positionLeft, SetPositionLeft] = useState(10)
 
@@ -60,7 +62,6 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
                         <img src={img} alt="exemple-image" className="exmple-img-mini-mini" />
                     </div>
 
-
                     <img src={img} alt="exemple-image" className="exmple-img" style={{ width: size, height: size, marginLeft: positionLeft }} />
                 </div>
 
@@ -69,7 +70,7 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
                     <div className="min-view-imges">
                         <img src={img} alt="exemple-image" className="exmple-img-mini" />
                         <ThemeProvider theme={customTheme}>
-                            <StyledAvatar className="styleIcons" style={{ marginLeft: 32, marginTop: 70 }}>
+                            <StyledAvatar className="styleIcons" style={{ marginLeft: 32, marginTop: 70, backgroundColor: "#0511F2", color: "white"}}>
                                 <RiImageAddFill />
                             </StyledAvatar>
                         </ThemeProvider>
@@ -80,7 +81,7 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
                     onChange={(e) => SetSize(e.target.value) + 10}/> */}
                         {/* //INICIO Sem FUNCIONALIDADE */}
                         <div>
-                            <Button aria-describedby={id} variant="contained" onClick={handleClick} >
+                            <Button aria-describedby={id} variant="contained" onClick={handleClick}  style={{backgroundColor:"#020659"}}>
                                 Modificar Tamanho
                             </Button>
                             <Popover style={{ width: 150 }}
@@ -100,17 +101,18 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
                         </div>
                         {/* //Sem FUNCIONALIDADE FIM*/}
                         <Stack spacing={3} direction="row">
-                            <Button variant="outlined" className="size-percentage" style={{ width: 180, marginLeft: 15 }}>Tamanho: {size * 10 / 100}%</Button>
+                            <Button variant="outlined" className="size-percentage" style={{ width: 180, marginLeft: 15}}>Tamanho: {size * 10 / 100}%</Button>
                         </Stack>
 
 
                         <Stack spacing={3} direction="row" className="icons-footer-config">
-                            <Button variant="outlined" className="buttonsZoom" onClick={() => { SetPositionLeft(positionLeft - 10) }}><BsFillArrowLeftCircleFill /></Button>
-                            <Button variant="outlined" className="buttonsZoom" onClick={() => { SetPositionLeft(positionLeft + 10) }}><BsFillArrowRightCircleFill /></Button>
+                            <Button variant="outlined" className="buttonsZoom" style={{backgroundColor: "#020659", color: "white"}} onClick={() => { SetPositionLeft(positionLeft - 10) }}><BsFillArrowLeftCircleFill /></Button>
+                            <Button variant="outlined" className="buttonsZoom" style={{backgroundColor: "#020659", color: "white"}} onClick={() => { SetPositionLeft(positionLeft + 10) }}><BsFillArrowRightCircleFill /></Button>
                             <Button variant="outlined" className="buttonsZoom" onClick={() => { SetSize(size + 10) }}> <AiOutlineZoomIn /></Button>
                             <Button variant="outlined" className="buttonsZoom" onClick={() => { SetSize(size - 10) }}> <AiOutlineZoomOut /></Button>
-                            <Button variant="contained" className="buttonsZoom" onClick={() => { SetSize(300), SetPositionLeft(320) }}> <MdOutlineRestore /></Button>
+                            <Button variant="contained" className="buttonsZoom" style={{backgroundColor: "#020659", color: "white"}} onClick={() => { SetSize(300), SetPositionLeft(320) }}> <MdOutlineRestore /></Button>
                         </Stack>
+                    
                     </div>
                 </div>
             </div>

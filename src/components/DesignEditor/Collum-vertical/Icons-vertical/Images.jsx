@@ -45,10 +45,12 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
             <div>
                 <h1>Images</h1>
                 <div className='container-images-vertical'>
-                    <ThemeProvider theme={customTheme}>
-                        <StyledAvatar><RiImageAddFill /></StyledAvatar>
-                    </ThemeProvider>
-                    <br/>
+                    <div>
+                        <ThemeProvider theme={customTheme}>
+                            <StyledAvatar style={{ backgroundColor: "#0511F2", color: "white", margin: 10 }}><RiImageAddFill /></StyledAvatar>
+                        </ThemeProvider>
+                    </div>
+                    <br />
                     <img src={img1} alt="pexels-anna-shvets-3845458" />
                     <img src={img2} alt="fauxels-3183150" />
                     <img src={img3} alt="icsa-1709003" />
