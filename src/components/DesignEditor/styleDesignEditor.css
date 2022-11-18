@@ -29,14 +29,14 @@ margin: 0px;
 }
 .container-vertical {
 display: flex;
-width: 20rem;
+width: 18rem;
 }
 
 .Coluna-vertical-icons {
 background-color: rgb(66, 46, 46);
 flex-direction: row; 
 height: 100%;
-width: 3rem;
+width: 4rem;
 }
 .Coluna-Vertical-Images {
 background-color: rgb(66, 30, 30);
@@ -78,18 +78,20 @@ flex-grow:2 ;
 margin: auto;
 width: 100%;
 height: 30%;
-
+}
+.min-view-imges{
+display: flex;
 }
 .styleIcons {
 width: 3rem;
 height: 2.5rem;
-margin: 5px 0px ;
+margin: 12px 0px 0px 5px ;
 padding: 8px ;
 cursor: pointer;
 }
-.styleIcons:hover {
+/* .styleIcons:hover {
 opacity: 0.5;
-}
+} */
 .name-icon {
 margin: 0px 0px 5px 0px;
 }
@@ -118,16 +120,18 @@ display: flex;
 align-items: baseline;
 justify-content: space-evenly;
 }
+.icons-footer-config{
+margin-top: 15px;
+margin-left: 160px;
+}
 .size-percentage {
 color: #37373ae0;
 padding: 1rem;
 }
 .buttonsZoom {
-height: 3rem;
-width: 5rem;
-font-size: 1.2rem;
-background-color: rgba(163, 135, 135, 0);
-/* margin: 1rem 0.5rem; */
+height: 1.5rem;
+width: 1rem;
+font-size: 1.5rem;
 border: none;
 }
 .buttonsZoom:hover{

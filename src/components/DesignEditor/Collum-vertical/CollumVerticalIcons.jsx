@@ -18,7 +18,11 @@ import { RiVideoAddFill } from "react-icons/ri";
 import { MdDoubleArrow } from "react-icons/md";
 import { useEffect, useState } from "react";
 
+
 import * as React from 'react';
+import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import { deepPurple } from '@mui/material/colors';
+import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import Paper from '@mui/material/Paper';
@@ -36,22 +40,57 @@ function CollumVerticalIcons() {
         setChecked((prev) => !prev);
     };
     //Final do botão show/hidden
+    const StyledAvatar = styled(Avatar)`
+${({ theme }) => `
+cursor: pointer;
+background-color: ${theme.palette.primary.main};
+transition: ${theme.transitions.create(['background-color', 'transform'], {
+        duration: theme.transitions.duration.standard,
+    })};
+&:hover {
+    // background-color: ${theme.palette.secondary.main};
+    transform: scale(1.3);
+}
+`}
+`;
     return (
         <>
             <div className="container-vertical" >
 
                 <div className="Coluna-vertical-icons" >
-                    <CgTemplate className="styleIcons" style={{ marginTop: 30 }} onClick={() => { SetValue(1) }} />
-                    <GoSettings className="styleIcons" onClick={() => { SetValue(2) }} />
-                    <FaShapes className="styleIcons" onClick={() => { SetValue(3) }} />
-                    <FaRegImages className="styleIcons" onClick={() => { SetValue(4) }} />
-                    <HiOutlineCloudUpload className="styleIcons" onClick={() => { SetValue(5) }} />
-                    <TfiText className="styleIcons" onClick={() => { SetValue(6) }} />
-                    <RiVideoAddFill className="styleIcons" onClick={() => { SetValue(7) }} />
+                    <StyledAvatar style={{ marginTop: 38 }} className="styleIcons">
+                        <CgTemplate onClick={() => { SetValue(1) }} />
+                    </StyledAvatar>
+                    <StyledAvatar className="styleIcons">
+                        <GoSettings onClick={() => { SetValue(2) }} />
+                    </StyledAvatar>
+                    <StyledAvatar className="styleIcons">
+                        <FaShapes onClick={() => { SetValue(3) }} />
+                    </StyledAvatar>
+                    <StyledAvatar className="styleIcons">
+                        <FaRegImages onClick={() => { SetValue(4) }} />
+                    </StyledAvatar>
+                    <StyledAvatar className="styleIcons">
+                        <HiOutlineCloudUpload onClick={() => { SetValue(5) }} />
+                    </StyledAvatar>
+                    <StyledAvatar className="styleIcons">
+                        <TfiText onClick={() => { SetValue(6) }} />
+                    </StyledAvatar>
+                    <StyledAvatar className="styleIcons">
+                        <RiVideoAddFill onClick={() => { SetValue(7) }} />
+                    </StyledAvatar>
+
+
+
+
+
+
+
+
 
                 </div>
                 {/* Botao de show/hidden */}
-                <FormControlLabel style={{ position: "fixed", left: 2 }}
+                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2 }}
                     control={<Switch checked={checked} onChange={handleChange} />} />
                 <Box sx={{ display: "flex" }}>
                     <Fade in={checked}>

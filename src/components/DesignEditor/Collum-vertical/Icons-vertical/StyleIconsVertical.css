@@ -37,13 +37,14 @@ opacity: 0.7;
 .container-images-vertical {
 display: flex;
 flex-wrap: wrap;
-width: 20rem;
+width: 15rem;
+
 
 }
 .container-images-vertical img{
 margin: 0.2rem;
-width: 7.5em;
-height: 7em;
+width: 6.5em;
+height: 6.5em;
 border-radius: 0.8rem;
 }
 .container-images-vertical img:hover{

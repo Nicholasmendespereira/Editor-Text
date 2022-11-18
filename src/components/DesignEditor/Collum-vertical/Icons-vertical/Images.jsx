@@ -2,6 +2,11 @@ import StyleIconsVertical from './StyleIconsVertical.css'
 
 import { RiImageAddFill } from 'react-icons/ri'
 
+import * as React from 'react';
+import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import { deepPurple } from '@mui/material/colors';
+import Avatar from '@mui/material/Avatar';
+
 import img1 from '../../../../imgs/images/pexels-anna-shvets-3845458.jpg'
 import img2 from '../../../../imgs/images/pexels-fauxels-3183150.jpg'
 import img3 from '../../../../imgs/images/pexels-icsa-1709003.jpg'
@@ -15,12 +20,35 @@ import img10 from '../../../../imgs/images/pexels-rodnae-productions-5922543.jpg
 
 
 function Images() {
+    const customTheme = createTheme({
+        palette: {
+            primary: {
+                main: deepPurple[500],
+            },
+        },
+    });
+    const StyledAvatar = styled(Avatar)`
+${({ theme }) => `
+cursor: pointer;
+background-color: ${theme.palette.primary.main};
+transition: ${theme.transitions.create(['background-color', 'transform'], {
+        duration: theme.transitions.duration.standard,
+    })};
+&:hover {
+    background-color: ${theme.palette.secondary.main};
+    transform: scale(1.3);
+}
+`}
+`;
     return (
         <>
             <div>
                 <h1>Images</h1>
                 <div className='container-images-vertical'>
-                    <RiImageAddFill style={{ fontSize: 35, marginRight: 250, marginBottom: 10, marginTop: 5 }} />
+                    <ThemeProvider theme={customTheme}>
+                        <StyledAvatar><RiImageAddFill /></StyledAvatar>
+                    </ThemeProvider>
+                    <br/>
                     <img src={img1} alt="pexels-anna-shvets-3845458" />
                     <img src={img2} alt="fauxels-3183150" />
                     <img src={img3} alt="icsa-1709003" />
