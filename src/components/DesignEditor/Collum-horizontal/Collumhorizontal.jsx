@@ -67,6 +67,7 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
 
 
                 <div className="Coluna-Horizontal-config">
+                    <div style={{backgroundColor: color}}></div>
                     <div className="min-view-imges">
                         <img src={img} alt="exemple-image" className="exmple-img-mini" />
                         <ThemeProvider theme={customTheme}>

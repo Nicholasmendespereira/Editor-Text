@@ -31,6 +31,9 @@ margin: 0px;
 display: flex;
 width: 18rem;
 }
+.MuiBox-root {
+display: none;
+}
 
 .Coluna-vertical-icons {
 background-color: #F29F05;
@@ -48,16 +51,6 @@ overflow: auto;
 background-color: #797b81;
 width: 5px;
 border-radius: 5px;
-}
-.DoubleArrow {
-background-color: rgba(163, 135, 135, 0);
-border: 0px;
-height: 27px;
-font-size: 30px;
-cursor: pointer;
-position: absolute;
-top: 10%;
-right: 25rem;
 }
 
 .Coluna-horizontal-View {

@@ -10,7 +10,7 @@ const [color, SetColor] = useState("#e66465")
         <div>
             <br /><br />
             <div className="container-inputcolors">
-                <h1 style={{ height: 38 }}>Customize</h1>
+                <h1 style={{marginTop: -35}}>Customize</h1>
                 <div>
                     <input type="color" name="input-color" id="input-color" value={color} onChange={(e) => SetColor(e.target.value)} />
                     <h3 style={{ color: color, textAlign: "initial", fontSize: 16, marginLeft: 5 }}>{color}</h3>

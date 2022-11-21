@@ -83,7 +83,7 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
 
                 </div>
                 {/* Botao de show/hidden */}
-                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2}}
+                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2, width:60}}
                     control={<Switch checked={checked} onChange={handleChange} />} />
                 <Box sx={{ display: "flex" }}>
                     <Fade in={checked}>
