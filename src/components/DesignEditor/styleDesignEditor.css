@@ -6,6 +6,7 @@ width: 100%;
 }
 
 .header {
+    width: 100vw;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -60,7 +61,7 @@ height: 70%;
 overflow: auto;
 }
 .horizontal-View-header {
-margin: auto;
+margin: 1rem;
 width: 95%;
 height: 50px;
 background-color: white;
@@ -106,6 +107,12 @@ width: 30px;
 height: 30px;
 margin: 0.5rem 0.5rem;
 }
+.container-colors {
+display: flex;
+margin: 0rem 0rem 0rem 25rem;
+}
+
+
 .footer-config {
 background-color: white;
 height: 100%;

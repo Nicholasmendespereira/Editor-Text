@@ -1,4 +1,4 @@
-import StyleIconsVertical from './StyleIconsVertical.css'
+import StyleIconsVertical from '../StyleIconsVertical.css'
 import img1 from '../../../../imgs/facebook.png'
 import img2 from '../../../../imgs/instagram.png'
 import img3 from '../../../../imgs/linkedin.png'

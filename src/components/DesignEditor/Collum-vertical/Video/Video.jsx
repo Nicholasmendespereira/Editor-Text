@@ -1,4 +1,4 @@
-import StyleIconsVertical from './StyleIconsVertical.css'
+
 function Video() {
     return(
         <>

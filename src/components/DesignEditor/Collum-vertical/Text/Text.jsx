@@ -1,4 +1,4 @@
-import StyleIconsVertical from './StyleIconsVertical.css'
+import StyleIconsVertical from '../StyleIconsVertical.css'
 function Text() {
     return(
         <>

@@ -1,4 +1,3 @@
-import StyleIconsVertical from './StyleIconsVertical.css'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import { HiOutlineCloudUpload } from "react-icons/hi";

@@ -6,13 +6,14 @@ import Collumhorizontal from './Collum-horizontal/Collumhorizontal'
 
 
 function DesignEditor() {
-    return(
+    return (
         <>
-        <Header/>
-    <div className='container-body'>
-        <CollumVerticalIcons/>
-        <Collumhorizontal/>        
-    </div>
+            {/* <Header /> */}
+            <div className='container-body'>
+                <CollumVerticalIcons />
+                <Collumhorizontal colorData={"red"} />
+
+            </div>
         </>
     )
 };

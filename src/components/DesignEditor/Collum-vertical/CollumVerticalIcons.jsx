@@ -1,13 +1,13 @@
 import styleDesignEditor from "../styleDesignEditor.css";
 
-import Templates from '../Collum-vertical/Icons-vertical/Templates'
-import Customize from '../Collum-vertical/Icons-vertical/Customize'
-import Elements from "./Icons-vertical/Elements";
-import Images from "./Icons-vertical/Images";
-import Uploads from "./Icons-vertical/Uploads";
-import Text from "./Icons-vertical/Text";
-import Video from "./Icons-vertical/Video";
-import TestCheckBox from '../TransitionMaterialUI/TestCheckBox'
+import Templates from '../Collum-vertical/Templates/Templates'
+import Customize from './Customize/Customize'
+import Elements from "./Elements/Elements";
+import Images from "./ImagesIcon/Images";
+import Uploads from "./Upload/Uploads";
+import Text from "./Text/Text";
+import Video from "./Video/Video";
+
 
 import { CgTemplate } from "react-icons/cg";
 import { GoSettings } from "react-icons/go";
@@ -28,9 +28,9 @@ import Switch from '@mui/material/Switch';
 import Paper from '@mui/material/Paper';
 import Fade from '@mui/material/Fade';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { display } from "@mui/system";
 
-function CollumVerticalIcons() {
+
+function CollumVerticalIcons(colorData = {color}) {
 
     const [value, SetValue] = useState(0)
     //Botao de show/ hidden
@@ -83,7 +83,7 @@ transition: ${theme.transitions.create(['background-color', 'transform'], {
 
                 </div>
                 {/* Botao de show/hidden */}
-                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2, width:60}}
+                <FormControlLabel style={{ position: "absolute", left: -5, padding: 2, width: 60 }}
                     control={<Switch checked={checked} onChange={handleChange} />} />
                 <Box sx={{ display: "flex" }}>
                     <Fade in={checked}>

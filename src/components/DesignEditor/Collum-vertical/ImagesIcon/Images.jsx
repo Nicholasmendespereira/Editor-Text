@@ -1,5 +1,3 @@
-import StyleIconsVertical from './StyleIconsVertical.css'
-
 import { RiImageAddFill } from 'react-icons/ri'
 
 import * as React from 'react';
