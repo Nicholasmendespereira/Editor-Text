@@ -67,7 +67,7 @@ height: 50px;
 background-color: white;
 }
 .Coluna-Horizontal-config {
-background-color: #F1F2F6;
+background-color: #ffffff;
 flex-grow:2 ;
 margin: auto;
 width: 100%;
@@ -109,7 +109,8 @@ margin: 0.5rem 0.5rem;
 }
 .container-colors {
 display: flex;
-margin: 0rem 0rem 0rem 25rem;
+width: 23rem;
+margin-left: 0;
 }
 
 
